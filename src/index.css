@@ -7,27 +7,24 @@
 }
 
 .content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-/* create new blog form */
-.home {
   max-width: 400px;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.home label {
+.content label {
   text-align: left;
   display: block;
 }
-.home h2 {
-  font-size: 20px;
+.content h1 {
+  font-size: 30px;
   color: #f1356d;
   margin-bottom: 30px;
 }
-.home input {
+.content input {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
@@ -35,7 +32,7 @@
   box-sizing: border-box;
   display: block;
 }
-.home button {
+.content button {
   background: #f1356d;
   color: #fff;
   border: 0;

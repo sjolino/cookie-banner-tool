@@ -10,6 +10,7 @@ const App = () => {
     <div className="app">
       <div className="content">
         <h1>Cookie Banner Deceptive Design Detection Tool</h1>
+        <br/>
         <DeceptiveDesignForm onSubmit={handleFormSubmit} />
       </div>
     </div>
