@@ -5,6 +5,7 @@ const App = () => {
 
   const handleFormSubmit = (url) => {
     console.log(`URL submitted: ${url}`);
+    document.querySelector("#url-text").innerText="URL Submitted: " + url;
     
     let form = new FormData();
     form.append("link", url);
@@ -22,6 +23,7 @@ const App = () => {
 					document.querySelector("#image-rate").innerText = "Options weight: " + a["iRate"];
 				}
 				else {
+          document.querySelector("#no-banner-text").innerText = "No banner detected.";
 					document.querySelector("#ItemPreview").src = "";
 					document.querySelector("#text-rate").innerText = "";
 					document.querySelector("#image-rate").innerText = "";
@@ -32,14 +34,26 @@ const App = () => {
 
   return (
     <div className="app">
-      <div className="content" style={{display: "flex", flexDirection: "column", alignItems : "center", justifyContent : "center"}}>
-        <h1>Cookie Banner Deceptive Design Detection Tool</h1>
+      <div className="content">
+        <h1>Insert Name</h1>
+        <h4> A Cookie Banner Deceptive Design Detection Tool</h4>
+        <br/>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Pellentesque et risus et augue ornare vestibulum. 
+          Pellentesque velit augue, vehicula eget efficitur ut, accumsan sit amet dui. 
+          In hac habitasse platea dictumst. Fusce quis eros sed nisi fermentum dignissim. 
+          Vestibulum pretium lacus non sapien maximus, vel finibus ipsum volutpat. 
+        </p>
         <br/>
         <DeceptiveDesignForm onSubmit={handleFormSubmit} />
         <br/>
-        <img id="ItemPreview" src=""/>
-        <div id="text-rate"></div>
-        <div id="image-rate"></div>
+        <div class="results-container">
+          <div class="text-results" id="url-text"></div>
+          <div class="text-results" id="no-banner-text"></div>
+          <img alt="" id="ItemPreview" src=""/>
+          <div class="text-results" id="text-rate"></div>
+          <div class="text-results" id="image-rate"></div>
+        </div>
       </div>
     </div>
   );

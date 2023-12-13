@@ -9,17 +9,17 @@ const DeceptiveDesignForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Enter website URL:
+    <div class="form-container">
+      <form onSubmit={handleSubmit}>
         <input
-          type="text"
-          value={url}
-          onChange={(e) => setUrl(e.target.value)}
-        />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+            type="text"
+            placeholder="Enter website URL"
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+          />
+        <button type="submit"> Submit </button>
+      </form>
+    </div>
   );
 };
 
